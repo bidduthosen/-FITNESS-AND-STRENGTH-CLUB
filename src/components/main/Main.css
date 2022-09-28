@@ -2,8 +2,20 @@
     display: grid;
     grid-template-columns: 4fr 1fr;
 }
-.active-club-container{
-    background-color: #E6E6E6;
+.club-container{
+    background-color: rgb(248, 249, 250);
+}
+.club-info{
+    margin-top: 40px;
+    margin-left: 20px;
+}
+.club-info h2{
+    color: blueviolet;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+.club-info h4{
+    padding: 15px 0;
 }
 .cart-container{
     background-color: silver;
