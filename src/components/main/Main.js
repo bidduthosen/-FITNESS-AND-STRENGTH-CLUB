@@ -3,6 +3,7 @@ import { faDumbbell } from '@fortawesome/free-solid-svg-icons'
 import React, { useState, useEffect } from 'react';
 import Product from '../Product/Product';
 import './Main.css'
+import Cart from '../cart/Cart';
 
 const Main = () => {
     const [products, setProducts] = useState([]);
@@ -17,9 +18,9 @@ const Main = () => {
                 <div className="club-info">
                 
                     <h2> <FontAwesomeIcon icon={faDumbbell}></FontAwesomeIcon> Fitness and Strength Club</h2>
-                    <h4>Age Select today’s exercise</h4>
+                    <h4>Select Today’s exercise</h4>
                 </div>
-                <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
                 {
                     products.map(product => <Product 
                         product ={product}
@@ -30,7 +31,7 @@ const Main = () => {
             </div>
             
             <div className="cart-container">
-                <h3>therea is cart part</h3>
+                <Cart></Cart>
             </div>
         </div>
     );

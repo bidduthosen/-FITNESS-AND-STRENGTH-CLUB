@@ -1,0 +1,16 @@
+.info{
+    height: 560px;
+    position: relative;
+    margin: 0;
+}
+.btn-cart{
+    width: 90%;
+    position: absolute;
+    bottom: 5px;
+    border: none;
+    height: 50px;
+}
+.btn-cart:hover{
+    background-color: aqua;
+    transition: .8s;
+}
