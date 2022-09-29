@@ -1,5 +1,5 @@
 .info{
-    height: 560px;
+    height: 500px;
     position: relative;
     margin: 0;
 }
@@ -12,5 +12,5 @@
 }
 .btn-cart:hover{
     background-color: aqua;
-    transition: .8s;
+    transition: .6s;
 }

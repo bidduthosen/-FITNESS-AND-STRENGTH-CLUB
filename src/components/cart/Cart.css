@@ -1,8 +1,7 @@
 .cart{
     position: sticky;
     top: 0;
-    margin: 15px;
-    text-align: center;
+    margin: 15px; 
 }
 .my-info{
     background-color: #c4c7c6;
@@ -11,4 +10,7 @@
     border-radius: 10px;
     border: 1px solid slateblue;
 
+}
+.exercise-info{
+    margin-top: 30px;
 }

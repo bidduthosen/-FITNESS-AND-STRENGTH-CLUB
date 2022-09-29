@@ -6,12 +6,22 @@ import './Main.css'
 import Cart from '../cart/Cart';
 
 const Main = () => {
-    const [products, setProducts] = useState([]);
+    const [ products, setProducts ] = useState([]);
+    const [cart, setCart] = useState([]);
+
+
     useEffect(()=>{
         fetch('data.json')
         .then(res => res.json())
         .then(data =>setProducts(data))
     },[])
+
+    const handleToAddCart = (product) =>{
+        console.log('added cart', product);
+        const newCart = [...cart, product];
+        setCart(newCart)
+    }
+
     return (
         <div className="main-container">
             <div className="club-container">
@@ -25,13 +35,14 @@ const Main = () => {
                     products.map(product => <Product 
                         product ={product}
                         key ={product.id}
+                        handleToAddCart={handleToAddCart}
                         ></Product>)
                 }
                 </div>
             </div>
             
             <div className="cart-container">
-                <Cart></Cart>
+                <Cart cart={cart}></Cart>
             </div>
         </div>
     );
