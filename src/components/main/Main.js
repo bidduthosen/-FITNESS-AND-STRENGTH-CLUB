@@ -43,7 +43,36 @@ const Main = () => {
             <div className="cart-container cols col-md-3">
                 <Cart cart={cart}></Cart>
             </div>
+
+            {/* model  */}
+            <div>
+            {/* <!-- Button trigger modal --> */}
+                
+
+                {/* <!-- Modal --> */}
+                <div className="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div className="modal-dialog modal-fullscreen">
+                    <div className="modal-content">
+                      <div className="modal-header">
+                        <h5 className="modal-title" id="exampleModalLabel">Important Question in react</h5>
+                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div className="modal-body">
+                       <div>
+                        <h4>1. How does react work?</h4>
+                        <small>Ans: React uses a declarative paradigm that makes it easier to reason about your application and aims to be both efficient and flexible. It designs simple views for each state in your application, and React will efficiently update and render just the right component when your data changes.</small>
+                       </div>
+                      </div>
+                      <div className="modal-footer">
+                        <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" className="btn btn-primary">Save changes</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
         </div>
+
     );
 };
 

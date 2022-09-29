@@ -26,3 +26,6 @@
 .break-btn button:hover{
     background-color: #8aaedc;
 }
+.blog-btn{
+    width: 100%;
+}

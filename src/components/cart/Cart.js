@@ -51,6 +51,11 @@ const Cart = ({cart}) => {
             <div className='mt-5'>
                 <h4 className='my-info text-center bg-info'>Activity Completed</h4>
             </div>
+            <div className='mt-5'>
+                <button type="button" className="btn btn-primary blog-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      Blog
+                    </button>
+                </div>
 
         </div>
     );
