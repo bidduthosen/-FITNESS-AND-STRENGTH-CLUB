@@ -46,10 +46,6 @@ const Main = () => {
 
             {/* model  */}
             <div>
-            {/* <!-- Button trigger modal --> */}
-                
-
-                {/* <!-- Modal --> */}
                 <div className="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
                   <div className="modal-dialog modal-fullscreen">
                     <div className="modal-content">
@@ -58,14 +54,22 @@ const Main = () => {
                         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
                       <div className="modal-body">
-                       <div>
-                        <h4>1. How does react work?</h4>
-                        <small>Ans: React uses a declarative paradigm that makes it easier to reason about your application and aims to be both efficient and flexible. It designs simple views for each state in your application, and React will efficiently update and render just the right component when your data changes.</small>
+                        <div className='blog-info'>
+                             <h4>1. How does react work?</h4>
+                             <small>Ans: React uses a declarative paradigm that makes it easier to reason about your application and aims to be both efficient and flexible. It designs simple views for each state in your application, and React will efficiently update and render just the right component when your data changes.</small>
+                        </div>
+                        <div className='blog-info'>
+                             <h4>2. That's the difference between props and state</h4>
+                             <small>Props are used to pass data from one component to another. The state is a local data storage that is local to the component only and cannot be passed to other components. The this. setState property is used to update the state values in the component.</small>
+                        </div>
+                        <div className='blog-info'>
+                             <h4>3. What is the difference between useEffect in React?</h4>
+                             <small>This snippet is based on the counter example from the previous page, but we added a new feature to it: we set the document title to a custom message including the number of clicks.
+                             Data fetching, setting up a subscription, and manually changing the DOM in React components are all examples of side effects. Whether or not you’re used to calling these operations “side effects” you’ve likely performed them in your components before.</small>
+                        </div>
                        </div>
-                      </div>
                       <div className="modal-footer">
                         <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" className="btn btn-primary">Save changes</button>
                       </div>
                     </div>
                   </div>
