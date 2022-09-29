@@ -12,7 +12,6 @@ const Cart = ({cart}) => {
         total = total + product.time;
     };
     const clickedButton =(value)=>{
-        console.log('data', value);
         setTime(value)
     }
     return (
@@ -21,7 +20,7 @@ const Cart = ({cart}) => {
                 <h4>Md:Biddut Hosen</h4>
                 <h6><FontAwesomeIcon icon={faLocationDot}></FontAwesomeIcon> <small>Mymensingh, Dhaka</small></h6>
             </div>
-            <div className='my-info d-md-flex justify-content-md-around'> 
+            <div className='my-info'> 
                 <div>
                     <h6>59<sub>kg</sub></h6>
                     <h6><sub>Width</sub></h6>
@@ -46,8 +45,8 @@ const Cart = ({cart}) => {
             </div>
             <div className='exercise-info'>
                 <h4>Exercise Details</h4>
-                <h5 className='my-info'>Exercise time : {total} seconds</h5>
-                <h5 className='my-info'>Break time: {time} seconds</h5>
+                <h6 className='my-info'>Exercise time : {total} seconds</h6>
+                <h6 className='my-info'>Break time: {time} seconds</h6>
             </div>
             <div className='mt-5'>
                 <h4 className='my-info text-center bg-info'>Activity Completed</h4>

@@ -2,7 +2,7 @@ import React from 'react';
 import './Product.css'
 
 const Product = ({handleToAddCart, product}) => {
-    const {name, picture, time, age, about} =product;
+    const {name, picture, time, age} =product;
     
     return (
         <div className="products">
@@ -10,8 +10,7 @@ const Product = ({handleToAddCart, product}) => {
                 <div className="card info">
                     <img src={picture} className="card-img-top" alt="..."/>
                     <div className="card-body">
-                    <h5 className="card-title">{name}</h5>
-                    <p>{about}</p>
+                    <h5 className="card-title name">{name}</h5>
                     <h6>For Age: {age}</h6>
                     <h6>Time required: {time}s</h6>
                     <button className="btn-cart" onClick={()=>handleToAddCart(product)}>Add to list</button>

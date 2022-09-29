@@ -22,8 +22,8 @@ const Main = () => {
     }
 
     return (
-        <div className="main-container">
-            <div className="club-container">
+        <div className="main-container row">
+            <div className="club-container cols col-md-9">
                 <div className="club-info">
                 
                     <h2> <FontAwesomeIcon icon={faDumbbell}></FontAwesomeIcon> Fitness and Strength Club</h2>
@@ -40,7 +40,7 @@ const Main = () => {
                 </div>
             </div>
             
-            <div className="cart-container">
+            <div className="cart-container cols col-md-3">
                 <Cart cart={cart}></Cart>
             </div>
         </div>

@@ -4,11 +4,13 @@
     margin: 15px; 
 }
 .my-info{
-    background-color: #c4c7c6;
     margin-top: 25px;
     padding: 10px;
     border-radius: 10px;
     border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    
 }
 .break-info{
     margin-top: 25px;
@@ -19,7 +21,7 @@
 }
 .break-btn button{
     border-radius: 15px;
-    margin-top: 8px;
+    padding: 4px;
 }
 .break-btn button:hover{
     background-color: #8aaedc;

@@ -1,6 +1,6 @@
 .main-container{
-    display: grid;
-    grid-template-columns: 4fr 1fr;
+    /* display: grid;
+    grid-template-columns: 4fr 1fr; */
 }
 .club-container{
     background-color: rgb(248, 249, 250);
