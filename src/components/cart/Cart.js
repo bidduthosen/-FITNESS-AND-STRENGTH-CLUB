@@ -1,7 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLocationDot} from '@fortawesome/free-solid-svg-icons'
+import { faLocationDot} from '@fortawesome/free-solid-svg-icons';
 import React, { useState } from 'react';
-import './Cart.css'
+import './Cart.css';
+import {toast, ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Cart = ({cart}) => {
 
@@ -11,9 +13,13 @@ const Cart = ({cart}) => {
     for(const product of cart){
         total = total + product.time;
     };
+
+    // break time value
     const clickedButton =(value)=>{
         setTime(value)
-    }
+    };
+    const notification = () => toast("Congratulation!! You are done.");
+
     return (
         <div className='cart'>
             <div >
@@ -35,7 +41,7 @@ const Cart = ({cart}) => {
                 </div>
             </div>
             <div className='break-info'>
-                <h4>Add A Break</h4>
+                <h4>Add A Break times Select</h4>
                 <div className='d-md-flex justify-content-md-around break-btn my-info'>
                     <button onClick={()=>clickedButton(10)}>10s</button>
                     <button onClick={()=>clickedButton(20)}>20s</button>
@@ -49,7 +55,8 @@ const Cart = ({cart}) => {
                 <h6 className='my-info'>Break time: {time} seconds</h6>
             </div>
             <div className='mt-5'>
-                <h4 className='my-info text-center bg-info'>Activity Completed</h4>
+                <button onClick={notification} className='my-info text-center bg-info w-100'>Activity Completed</button>
+                <ToastContainer/>
             </div>
             <div className='mt-5'>
                 <button type="button" className="btn btn-primary blog-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
