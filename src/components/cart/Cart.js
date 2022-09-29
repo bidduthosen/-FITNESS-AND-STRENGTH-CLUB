@@ -1,12 +1,19 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot} from '@fortawesome/free-solid-svg-icons'
-import React from 'react';
+import React, { useState } from 'react';
 import './Cart.css'
 
 const Cart = ({cart}) => {
+
+    const [time, setTime] =useState(0);
+
     let total= 0;
     for(const product of cart){
-        total = total + product.time
+        total = total + product.time;
+    };
+    const clickedButton =(value)=>{
+        console.log('data', value);
+        setTime(value)
     }
     return (
         <div className='cart'>
@@ -28,10 +35,22 @@ const Cart = ({cart}) => {
                     <h6><sub>Age</sub></h6>
                 </div>
             </div>
+            <div className='break-info'>
+                <h4>Add A Break</h4>
+                <div className='d-md-flex justify-content-md-around break-btn my-info'>
+                    <button onClick={()=>clickedButton(10)}>10s</button>
+                    <button onClick={()=>clickedButton(20)}>20s</button>
+                    <button onClick={()=>clickedButton(30)}>30s</button>
+                    <button onClick={()=>clickedButton(40)}>40s</button>
+                </div>
+            </div>
             <div className='exercise-info'>
                 <h4>Exercise Details</h4>
-                <h5 className='my-info'>Exercise time : {total}s</h5>
-
+                <h5 className='my-info'>Exercise time : {total} seconds</h5>
+                <h5 className='my-info'>Break time: {time} seconds</h5>
+            </div>
+            <div className='mt-5'>
+                <h4 className='my-info text-center bg-info'>Activity Completed</h4>
             </div>
 
         </div>

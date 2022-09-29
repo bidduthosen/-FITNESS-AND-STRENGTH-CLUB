@@ -8,9 +8,19 @@
     margin-top: 25px;
     padding: 10px;
     border-radius: 10px;
-    border: 1px solid slateblue;
+    border: 1px solid black;
+}
+.break-info{
+    margin-top: 25px;
 
 }
 .exercise-info{
-    margin-top: 30px;
+    margin-top: 50px;
+}
+.break-btn button{
+    border-radius: 15px;
+    margin-top: 8px;
+}
+.break-btn button:hover{
+    background-color: #8aaedc;
 }
